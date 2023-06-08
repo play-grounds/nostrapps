@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script type="module">
+      import Navbar from './components/NavbarLogin.js'
+      import Sidebar from './components/Sidebar.js'
+      import { html, render } from './js/standalone.module.js'
+      import 'https://unpkg.com/nostr-event'
+
+      render(
+        html`
+          <${Navbar} />
+          <${Sidebar} />
+          <div style="margin-left: 215px; margin-top: 15px;">
+            <nostr-event
+              content="https://cdn.midjourney.com/8cb70e07-3e5a-43e4-a4ec-b331865fdc49/grid_0.png Midjourney Showcase"
+            />
+          </div>
+        `,
+        document.body
+      )
+    </script>
+  </body>
+</html>
